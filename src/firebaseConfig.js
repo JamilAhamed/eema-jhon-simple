@@ -1,10 +1,9 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDrnTlaFOThHGej0ZkIglLffFZZioNSPiI",
-    authDomain: "ema-test-jkr.firebaseapp.com",
-    databaseURL: "https://ema-test-jkr.firebaseio.com",
-    projectId: "ema-test-jkr",
-    storageBucket: "ema-test-jkr.appspot.com",
-    messagingSenderId: "273630571694",
-    appId: "1:273630571694:web:dd5435e9e8b7deb372913f"
-  };
+  apiKey: "AIzaSyD-Dic2NdBy-u2gq1mTZKuuvFYxQ3PMpjc",
+  authDomain: "eema-jhon-simple.firebaseapp.com",
+  projectId: "eema-jhon-simple",
+  storageBucket: "eema-jhon-simple.appspot.com",
+  messagingSenderId: "344886847895",
+  appId: "1:344886847895:web:c2c51fe68c21cd2f33bcd2"
+};
 export default firebaseConfig;
