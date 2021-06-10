@@ -3,14 +3,14 @@ import React from 'react';
 const Inventory = () => {
     const handleAddProducts =() =>{
         const product = {};
-        fetch('http://localhost:5000/addProduct',{
+        fetch('https://radiant-beyond-85675.herokuapp.com/addProduct',{
             method: 'POST',
             headers: {
                 'content-Type':'application/json'
             },
             body:JSON.stringify(product)
-        })
-    }
+        });
+    };
     return (
         <div>
             <form action="">

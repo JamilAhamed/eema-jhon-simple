@@ -8,11 +8,10 @@ const ProductDetail = () => {
     const [product, setProduct] = useState({});
 
     useEffect(()=>{
-        fetch('http://localhost:5000/products/'+ productKey)
+        fetch('https://radiant-beyond-85675.herokuapp.com/products/'+ productKey)
         .then(res => res.json())
         .then(data => setProduct(data));
-    },[productKey])
-    // const product = fakeData.find(pd => pd.key === productKey);
+    },[productKey]);
     
     return (
         <div>

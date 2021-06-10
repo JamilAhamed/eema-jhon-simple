@@ -26,7 +26,7 @@ const Review = () => {
         const savedCart = getDatabaseCart();
         const productKeys = Object.keys(savedCart);
 
-        fetch('http://localhost:5000/productsKeys',{
+        fetch('https://radiant-beyond-85675.herokuapp.com/productsKeys',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

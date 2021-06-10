@@ -12,7 +12,7 @@ const Shipment = () => {
       const savedCart = getDatabaseCart()
       const orderDetails ={...loggedInUser,products: savedCart, shipment: data, orderTime: new Date()}
 
-    fetch('http://localhost:5000/addOrder',{
+    fetch('https://radiant-beyond-85675.herokuapp.com/addOrder',{
       method:'POST',
       headers:{
         'Content-Type': 'application/json'
@@ -25,7 +25,7 @@ const Shipment = () => {
         processOrder()
         alert('Your Order Placed')
       }
-    })
+    });
 
     };
 

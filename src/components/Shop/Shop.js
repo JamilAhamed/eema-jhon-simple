@@ -8,20 +8,19 @@ import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseMana
 import { Link } from 'react-router-dom';
 
 const Shop = () => {
-    // const first10 = fakeData.slice(0,10);
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
 
     useEffect(() =>{
-        fetch('http://localhost:5000/products')
+        fetch('https://radiant-beyond-85675.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
-    },[])
+    },[]);
     
     useEffect(()=>{
         const savedCart = getDatabaseCart();
         const productKeys = Object.keys(savedCart);
-        fetch('http://localhost:5000/productsKeys',{
+        fetch('https://radiant-beyond-85675.herokuapp.com/productsKeys',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -30,7 +29,7 @@ const Shop = () => {
         })
         .then(res => res.json())
         .then(data => setCart(data))
-    }, [])
+    }, []);
 
     const handleAddProduct = (product) =>{
         const toBeAddedKey = product.key;
@@ -49,7 +48,7 @@ const Shop = () => {
         }
         setCart(newCart);
         addToDatabaseCart(product.key, count);
-    }
+    };
 
     return (
         <div className="twin-container">
@@ -61,7 +60,7 @@ const Shop = () => {
                         handleAddProduct = {handleAddProduct}
                         product={pd}
                         ></Product>)
-                }
+                };
             </div>
             <div className="cart-container">
                <Cart cart={cart}>
